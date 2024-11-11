@@ -1,0 +1,28 @@
+Prompt: Buď mým programátorem. Založ mi projekt v JavaScriptu (Node.js) a s NPM. Bude se jednat o jednoduchou webovou aplikaci, ve které bude nějaká databáze uživatelů, 
+kteří se budou moct zaregistrovat, přihlásit, navštívit svůj profil a odstranit svůj účet. Popiš mi postup od otevření VS Studia po zdrojový kód.
+
+Nástroje: Antropic Claud AI, OpenAI ChatGPT a Microsoft Copilot (bez vytvoření účtu, pro všechny byl zadán stejný prompt)
+Kombinace nástrojů: AI jsme mezi sebou nekombinovali, zajímali nás pouze samostatné jazykové modely
+Konverzace: S jazykovým modelem jsme komunikovali v jednom dlouhém chatu
+Práce ve dvojici: Já jsem pracoval se staral o projekt a Lukáš Michera diskutoval ohledně promptů a s technickými problémy (instalace frameworku)
+
+Microsoft Copilot
+
+
+OpenAI ChatGPT (GPT-4o Mini)
+
++ s tímto modelem jsem diskutoval asi nejdéle a stále věděl, o čem je řeč (asi nejvíce tokenů ve free verzi)
++ postup, který si zvolil není zrovna snadný a přehledný a je nefunkční (kód by taky potřeboval optimalizovat programátorem pro užití v praxi - GPT to nedokáže)
++ postup napsal detailně a srozumitelně i s instalací knihoven, pochopitelné i pro začátečníky (kód včetně komentářů)
++ databáze včetně ochrany hesel před štením (knohivna bcryptjs)
++ relativně přehledně strukturoval jednotlivé soubory do složek
+- při tvorbě si zvolil databázi MongoDB, což není nejoptimálnější řešení pro takto jednoduchou aplikaci
+- občas si však při opravování vlastní chyby nevědomky vytvoří novou chybu v kódu
+- souhlasí ze vším, přestože to není pravda (uzná, že má kód špatně přestože je správně)
+- front-end stránky nebyl zrovna ukázkový ani přehledný (na druhou stranu když to funguje, tak proč to měnit)
+- v kódu se občas ovjeví naprosté nesmysly nebo části kódu, které jsou nadbytečné (to si však dokáže po sobe opravit, když je na to upozorněn)
+- pro funkční kód vygenerovaný tímhle jazkovým modelem bychom potřebovali mnohemi více času
+
+Antropic Claude AI
+
+

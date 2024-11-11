@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+
+# Visual Studio Code
+.vscode/
+
+# Nástroje pro indexování
+FileContentIndex/
+
+# Další soubory specifické pro IDE nebo operaèní systém
+Thumbs.db
+Desktop.ini
