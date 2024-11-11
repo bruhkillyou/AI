@@ -4,25 +4,48 @@ kteří se budou moct zaregistrovat, přihlásit, navštívit svůj profil a ods
 Nástroje: Antropic Claud AI, OpenAI ChatGPT a Microsoft Copilot (bez vytvoření účtu, pro všechny byl zadán stejný prompt)
 Kombinace nástrojů: AI jsme mezi sebou nekombinovali, zajímali nás pouze samostatné jazykové modely
 Konverzace: S jazykovým modelem jsme komunikovali v jednom dlouhém chatu
-Práce ve dvojici: Já jsem pracoval se staral o projekt a Lukáš Michera diskutoval ohledně promptů a s technickými problémy (instalace frameworku)
+Práce ve dvojici: Já jsem pracoval se staral o projekt a Lukáš Michera diskutoval ohledně promptů a s technickými problémy (instalace frameworku aj.)
 
-Microsoft Copilot
+
+Microsoft Copilot (FREE)
+
++ s tímto modelem jsem diskutovali relativně dlouhou dobu, dokáže generovat i vizualizaci ve free verzi (propojen s DALLE-3)
++ zvolil si né zrovna jednoduchý postup (velice podobný s GPT), avšak po dlouhém dohadování se nakonec vygenerovaná aplikace stala víceméně funkční
++ relativně atraktivní front-end aplikace
+- svůj postup nijak zvlášť neokomentoval ani nevysvětlil (musel k tomu být vyzván a ani tak jsme se nedozvěděli některé věci)
+- jako jediný testovaný model se nezabýval žádným zabezpečením hesel v databázi
+- nevytvořil nám žádnou souborovou strukturu, takže vše je vloženo v jedné složce (nepřehledné)
+- v kódu se občas objeví naprosté nesmysly nebo části kódu, které jsou nadbytečné (to si však dokáže po sobe opravit, když je na to upozorněn)
+- kód nebyl přehledný a ani nijak zabezpečený dokud na to nebyl upozorněn (soboně bych se bál bezpečnostních slabin při použití v korporátním sektoru)
+- při tvorbě si zvolil databázi MongoDB, což není nejoptimálnější řešení pro takto jednoduchou aplikaci
 
 
 OpenAI ChatGPT (GPT-4o Mini)
 
 + s tímto modelem jsem diskutoval asi nejdéle a stále věděl, o čem je řeč (asi nejvíce tokenů ve free verzi)
-+ postup, který si zvolil není zrovna snadný a přehledný a je nefunkční (kód by taky potřeboval optimalizovat programátorem pro užití v praxi - GPT to nedokáže)
 + postup napsal detailně a srozumitelně i s instalací knihoven, pochopitelné i pro začátečníky (kód včetně komentářů)
-+ databáze včetně ochrany hesel před štením (knohivna bcryptjs)
++ databáze včetně ochrany hesel před čtením (knohivna bcryptjs)
 + relativně přehledně strukturoval jednotlivé soubory do složek
+- postup, který si zvolil není zrovna snadný a přehledný a je nefunkční (kód by taky potřeboval optimalizovat programátorem pro užití v praxi - GPT to nedokáže)
 - při tvorbě si zvolil databázi MongoDB, což není nejoptimálnější řešení pro takto jednoduchou aplikaci
 - občas si však při opravování vlastní chyby nevědomky vytvoří novou chybu v kódu
 - souhlasí ze vším, přestože to není pravda (uzná, že má kód špatně přestože je správně)
 - front-end stránky nebyl zrovna ukázkový ani přehledný (na druhou stranu když to funguje, tak proč to měnit)
-- v kódu se občas ovjeví naprosté nesmysly nebo části kódu, které jsou nadbytečné (to si však dokáže po sobe opravit, když je na to upozorněn)
-- pro funkční kód vygenerovaný tímhle jazkovým modelem bychom potřebovali mnohemi více času
+- v kódu se občas objeví naprosté nesmysly nebo části kódu, které jsou nadbytečné (to si však dokáže po sobe opravit, když je na to upozorněn)
+- pro funkční kód vygenerovaný tímhle jazkovým modelem bychom potřebovali mnohem více času
 
-Antropic Claude AI
+Antropic Claude AI (v3.5 Sonnet)
 
++ tomuto modelu stačil pouze jedenb prompt k vygenerování plně funkční aplikace
++ jako jediný testovný model působí dojmem, že "přemýšlí" nad tím, co řekne a vygeneruje
++ použití jednoduché databáze SQLLite se jeví jako nejlepší řešení pro jednoduché aplikace
++ svůj kód okomentoval a napsal i dostatečně podrobný popis toho, co jednotlivé části kódu dělají
++ kód obsahuje i ty nejdrobnější optimalizace a doplňky (např. email musí mít určitý formát a musí obsahovat @)
++ aplikace se jeví velmi bezpečná díky hashování hesel a heslo musí mít alespoň 8 znaků
++ front-end stránky byl intuitivní, jednoduchý, ale i barevný a relativně atraktivní (nemusel by se za něho stydět ani lokální podnik)
++ v kódu nebyli žádné nesmysli a ani nadbytečné části
++ pokud si je jistá svým názorem, tak si za ním stojí
+- ve free verzi je relativně dost omezený počet promptů, což však na jednu stranu dává smysl (nepoužívám již nic jiného, opravdu jediný jazykový model, který potřebuju)
+
+Budoucí výuka: Osobně preferujeme výuku s pomocí AI. Myslíme si, že má alespoň v programování velký potenciál a přínos.
 
